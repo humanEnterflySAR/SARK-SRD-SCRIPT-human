@@ -1,8 +1,8 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
  
 local Window = Rayfield:CreateWindow({
-   Name = "GXG HUB汉化 | Death Ball",
-   LoadingTitle = "GxG Hub | Death ball",
+   Name = "GXG HUB汉化 | 死亡球",
+   LoadingTitle = "GXG HUB | 死亡球",
    LoadingSubtitle = "Script by galalsameer_gxg",
    ConfigurationSaving = {
       Enabled = true,
