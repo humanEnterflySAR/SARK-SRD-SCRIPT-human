@@ -1,0 +1,178 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+ 
+local Window = Rayfield:CreateWindow({
+   Name = "GXG HUB汉化 | Death Ball",
+   LoadingTitle = "GxG Hub | Death ball",
+   LoadingSubtitle = "Script by galalsameer_gxg",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "GxG Hub"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+ 
+local MainTab = Window:CreateTab("主要", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Loaded!")
+ local MainButton = MainTab:CreateButton({
+   Name = "自动挡20%",
+   Callback = function()
+loadstring(Game:HttpGet("https://raw.githubusercontent.com/sirapobsriumang/Death-Ball/main/Main"))()
+   end,
+})
+local MainButton = MainTab:CreateButton({
+   Name = "自动检测垃圾邮件",
+   Callback = function()
+      		print("button pressed")
+	end    
+})
+local MainSection = MainTab:CreateSection("Other")
+local MainButton = MainTab:CreateButton({
+   Name = "自动行走",
+   Callback = function()
+ v=1;loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Auto%20Walk%20Obfuscator'))()
+end
+})
+local MainButton = MainTab:CreateButton({
+   Name = "准备就绪后生成",
+   Callback = function()
+local spawn = Instance.new("TextButton") 
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.SpawnLocation.CFrame
+end
+})
+local MainSection = MainTab:CreateSection("Show ☄Part")
+local MainButton = MainTab:CreateButton({
+   Name = "显示可视化部分",
+   Callback = function()
+ v=1;-- Define a global table to simulate getgenv()
+local globals = {}
+-- Define placeholder for get_plr() if not already defined
+local function get_plr()
+    -- Placeholder implementation, replace with actual logic to get the player object.
+    return game.Players.LocalPlayer
+end
+local Range = 10
+-- Define IsAlive function if not already defined
+local function IsAlive()
+    -- Placeholder implementation, replace with actual logic to check if the player is alive.
+    local Alive = workspace:WaitForChild("Alive", 20)
+    return Alive and Alive:FindFirstChild(get_plr().Name) ~= nil
+end
+-- Define ViewParryArea function
+local function ViewParryArea()
+    -- Clean up any previous Visual object
+    local previousVisual = workspace:FindFirstChild("Parry Range")
+    if previousVisual then
+        previousVisual:Destroy()
+    end
+    -- Create a new Visual part
+    local Visual = Instance.new("Part", workspace)
+    Visual.Name = "Parry Range"
+    Visual.Material = Enum.Material.ForceField
+    Visual.CastShadow = false
+    Visual.CanCollide = false
+    Visual.Anchored = true
+    Visual.BrickColor = BrickColor.new(1004)
+    Visual.Shape = Enum.PartType.Ball
+
+    -- Retrieve the local player
+    local Players = game:GetService("Players")
+    local Player = Players.LocalPlayer
+
+    -- Keep track of the visibility of the parry area
+    globals.ViewParryArea = true
+
+    -- Main loop to visualize the parry area
+    while globals.ViewParryArea do
+        -- Use a wait time that doesnĂ¢â‚¬â„¢t degrade performance
+        
+        task.wait() 
+        local plrChar = Player.Character or Player.CharacterAdded:Wait()
+        local plrPP = plrChar:FindFirstChild("HumanoidRootPart") or plrChar.PrimaryPart
+
+        if plrPP then
+            Visual.CFrame = CFrame.new(plrPP.Position)
+            -- Additional logic for determining the Range based on your game's need
+            Visual.Size = Vector3.new(Range, Range, Range)
+            if plrChar:FindFirstChild("Highlight") then
+                Visual.BrickColor = BrickColor.new(1004)
+                Range = 40
+            else
+                Visual.BrickColor = BrickColor.new(1023)
+                Range = 40
+            end
+            -- Position the Visual at the player's position
+            Visual.Position = plrPP.Position
+        else
+            -- If the player does not have a primary part, move the Visual off-screen
+            Visual.Position = Vector3.new(1000, 1000, 1000)
+        end
+    end
+end
+
+-- Call the ViewParryArea function to activate the parry area visualization
+while true do
+ViewParryArea()
+task.wait()
+end
+   end,
+})
+local MainTab = Window:CreateTab("头目", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Auto Fram Boss")
+local MainButton = MainTab:CreateButton({
+   Name = "Auto Fram Boss ( Spirit Boss )",
+   Callback = function()
+      		local plr = game.Players.LocalPlayer
+plr.Character.HumanoidRootPart.CFrame = CFrame.new(291, 284, 1065)
+  	end    
+})
+local MainButton = MainTab:CreateButton({
+   Name = "Auto Fram Boss ( Mech Boss ) ",
+   Callback = function()
+   		local plr = game.Players.LocalPlayer
+plr.Character.HumanoidRootPart.CFrame = CFrame.new(459, 514, 988)
+  	end    
+})
+local MainSection = MainTab:CreateSection("Spawn on Boss")
+local MainButton = MainTab:CreateButton({
+   Name = "Spawn on Boss ( Spirit Boss ) ",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Neto33rec/Boss-Farmer/refs/heads/main/Spirit%20Boss"))()
+end
+})
+local MainButton = MainTab:CreateButton({
+   Name = "Spawn on Boss ( Mech Boss ) ",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Neto33rec/Boss-Farmer/refs/heads/main/Mech%20Boss"))()
+end
+})
+local MainTab = Window:CreateTab("Misc", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Free")
+local MainButton = MainTab:CreateButton({
+   Name = "Anti AFK ",
+   Callback = function()
+ loadstring(game:HttpGet("https://pastebin.com/raw/ExeUC8U3"))()
+end
+})
+local MainButton = MainTab:CreateButton({
+   Name = "Infinity Yield",
+   Callback = function()
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end
+})
+local MainTab = Window:CreateTab("汉化作者", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("汉化作者：人")
