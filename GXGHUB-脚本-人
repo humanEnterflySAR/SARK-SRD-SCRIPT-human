@@ -176,3 +176,4 @@ end
 })
 local MainTab = Window:CreateTab("汉化作者", nil) -- Title, Image
 local MainSection = MainTab:CreateSection("汉化作者：人")
+local MainSection = MainTab:CreateSection("原作者： galalsameer")
