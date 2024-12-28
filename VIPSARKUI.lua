@@ -435,30 +435,30 @@ end
 -- Properties:
 
 Frame.Parent = dogent
-Frame.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.00829315186, 0, 0.31107837, 0)
-Frame.Size = UDim2.new(0, 25, 0, 25)
+Frame.Size = UDim2.new(0, 50, 0, 50)
 Frame.BackgroundTransparency = 1.000
 
 UICorner.CornerRadius = UDim.new(0, 90)
 UICorner.Parent = Frame
 
 Open.Parent = Frame
-Open.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+Open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Open.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Open.BorderSizePixel = 0
-Open.Size = UDim2.new(2, 2, 2, 2)
+Open.Size = UDim2.new(2, 5, 2, 5)
 Open.Active = true
 Open.Draggable = true
 Open.Image = "rbxassetid://116391374391335"
 Open.MouseButton1Click:Connect(function()
   Main.Visible = not Main.Visible
-  Open.Image = Main.Visible and "rbxassetid://76947754029304" or "rbxassetid://76947754029304" --开关的图
+  Open.Image = Main.Visible and "rbxassetid://76947754029304" or "rbxassetid://116391374391335" --开关的图
 end)
 
-UICorner_2.CornerRadius = UDim.new(0, 40)
+UICorner_2.CornerRadius = UDim.new(0, 90)
 UICorner_2.Parent = Open
 UIG.Parent = Open
       
@@ -484,7 +484,7 @@ UIG.Parent = Open
         TabIco.BackgroundTransparency = 1.000
         TabIco.BorderSizePixel = 0
         TabIco.Size = UDim2.new(0, 24, 0, 24)
-        TabIco.Image = "rbxassetid://7733798747" or icon and "rbxassetid://"..icon
+        TabIco.Image = "rbxassetid://7734068321" or icon and "rbxassetid://"..icon
         TabIco.ImageTransparency = 0.2
         
         TabText.Name = "TabText"
