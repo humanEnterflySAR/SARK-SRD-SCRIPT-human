@@ -439,7 +439,7 @@ Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.00829315186, 0, 0.31107837, 0)
-Frame.Size = UDim2.new(0, 50, 0, 50)
+Frame.Size = UDim2.new(0, 60, 0, 60)
 Frame.BackgroundTransparency = 1.000
 
 UICorner.CornerRadius = UDim.new(0, 90)
@@ -449,7 +449,7 @@ Open.Parent = Frame
 Open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Open.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Open.BorderSizePixel = 0
-Open.Size = UDim2.new(2, 5, 2, 5)
+Open.Size = UDim2.new(2, 5, 5, 28)
 Open.Active = true
 Open.Draggable = true
 Open.Image = "rbxassetid://76947754029304"
