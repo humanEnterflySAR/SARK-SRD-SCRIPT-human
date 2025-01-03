@@ -452,10 +452,10 @@ Open.BorderSizePixel = 0
 Open.Size = UDim2.new(2, 5, 2, 5)
 Open.Active = true
 Open.Draggable = true
-Open.Image = "rbxassetid://116391374391335"
+Open.Image = "rbxassetid://76947754029304"
 Open.MouseButton1Click:Connect(function()
   Main.Visible = not Main.Visible
-  Open.Image = Main.Visible and "rbxassetid://76947754029304" or "rbxassetid://116391374391335" --开关的图
+  Open.Image = Main.Visible and "rbxassetid://76947754029304" or "rbxassetid://76947754029304" --开关的图
 end)
 
 UICorner_2.CornerRadius = UDim.new(0, 90)
@@ -484,7 +484,7 @@ UIG.Parent = Open
         TabIco.BackgroundTransparency = 1.000
         TabIco.BorderSizePixel = 0
         TabIco.Size = UDim2.new(0, 24, 0, 24)
-        TabIco.Image = "rbxassetid://7734068321" or icon and "rbxassetid://"..icon
+        TabIco.Image = "rbxassetid://76947754029304" or icon and "rbxassetid://"..icon
         TabIco.ImageTransparency = 0.2
         
         TabText.Name = "TabText"
